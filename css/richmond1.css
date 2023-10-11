@@ -1,0 +1,204 @@
+@charset "utf-8";
+@import url('fonts.css');
+@import url('all.min.css');
+
+html {font-size: 16px;}
+body {font: 400 16px "Noto Sans KR", sans-serif; color: #555;}
+
+/* header */
+header {
+    position: fixed; 
+    left: 0; right: 0; top: 0; 
+    background: #fff;
+    height: 100px;
+    border-bottom: 1px solid #f4f4f4;
+    box-sizing: border-box;
+    z-index: 50;
+}
+header .logo {
+    position: absolute;
+    top: 50%; left: 4%;
+    width: 180px; height: 50px;
+    /* transform: translateY(-50%); */
+    margin-top: -25px;
+}
+header .logo > a {
+    display: block;
+    width: 100%; height: 100%; 
+    background: url(../img/logo.png) no-repeat center/contain;
+}
+header .gnb {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    text-align: center;
+    font-size: 0;
+}
+header .gnb > ul > li {
+    position: relative;
+    float: left;    
+}
+header .gnb > ul > li > a {
+    display: block;
+    position: relative;
+    padding: 0 35px;
+    font-size: 1.125rem;
+    line-height: 100px;
+    color: #000
+}
+/* depth2 _sub */
+header .gnb > ul ul {
+    position: absolute; 
+    top: 80px;
+    width: 100%; 
+    padding: 10px;
+    box-sizing: border-box;
+    display: none;
+}
+header .gnb > ul ul a {
+    display: block;
+    font-size: 0.938rem; /* html에 선언된 16px을 기준으로 15px로 나눈 값 */
+    line-height: 2.4em; /* 현재 요소의 폰트 크기 15픽셀을 기준으로 36픽셀 
+    적용한 값 */
+}
+header .gnb > ul ul a:hover,
+header .gnb > ul ul a:focus {
+    color: #8d7249;
+    text-decoration: underline;
+}
+
+/* util */
+header .util {
+    position: absolute;
+    top: 50%; right: 4%;
+    transform: translateY(-50%);
+}
+header .util .tel_mobile {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+header .util .tel_mobile:before {
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    width: 12px; height: 12px;
+    background: url(../img/tel-bl.png) no-repeat;
+}
+header .util .ico_insta {
+    display: inline-block;
+    width: 35px; height: 35px;
+    background: #000 url(../img/insta-wh.png) no-repeat center;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+.bgGnb {
+    position: fixed; 
+    left: 0; right: 0; top: 100px;
+    min-height: 170px;
+    background: #ffffff;
+    display: none;
+    z-index: 5;
+}
+
+/* mainMov */
+#mainMov {padding: 0 4%; box-sizing: border-box;}
+#mainMov .contWrap {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+#mainMov .contWrap video {
+    /* position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%); */
+    min-width: 100%;
+    min-height: 100%;    
+}
+/* main1 */
+#main01 {
+    position: relative;
+    padding: 0 4%;
+    box-sizing: border-box;
+}
+#main01 .contWrap {
+    height: 90vh;
+    background: url(../img/main1-bg.jpg) no-repeat fixed center/cover;
+}
+#main01 .mainCont {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    padding-top: 140px;
+    height: 40vh;
+    background: #fff;
+    text-align: center;
+    z-index: 10;
+}
+#main01 .mainCont .midText {
+    font-size: 1.5rem;
+    color: rgba(0,0,0,0.7);
+    margin-bottom: 10px;
+}
+#main01 .mainCont .bigText {
+    font-size: 2.5rem;
+    color: #000;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 50px;
+}
+#main01 .mainCont .smallText {
+    margin-top: 25px;
+    color: rgba(0,0,0,0.7);
+    font-size: 1.125rem;
+}
+
+/* main02 */
+#main02 {padding: 0 4%;}
+#main02 .contWrap {
+    overflow: hidden;
+    padding: 250px 0 200px;
+    background: #fff;
+}
+#main02 .contLeft {float: left; width: 40%;}
+#main02 .contLeft .bigText {
+    margin-bottom: 50px;
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #111;
+}
+#main02 .contLeft .midText {
+    font-size: 1.5rem;
+    color: rgba(0,0,0,0.7);
+    margin-bottom: 35px;
+}
+#main02 .contLeft span {display: block;}
+#main02 .contLeft .midText span:last-child {
+    font-weight: 500; 
+    color: rgba(0,0,0,0.85);
+}
+#main02 .contLeft .smallText {font-size: 1.063rem; color: rgba(0,0,0,0.6);}
+#main02 .contLeft .smallText span:first-child {margin-bottom: 20px;}
+#main02 .contRright {float: right; width: 60%; margin-left: -40px;}
+#main02 .contRright .richBg {
+    float: left;
+    width: calc(100%/3 - 40px); 
+    height: 730px;
+    margin-left: 40px;
+    background: no-repat center top/cover;   
+}
+#main02 .contRright .richBg.bg1 {background-image: url(../img/main2-img1.jpg);}
+#main02 .contRright .richBg.bg2 {margin-top: -100px; background-image: url(../img/main2-img2.jpg);}
+#main02 .contRright .richBg.bg3 {margin-top: 150px; background-image: url(../img/main2-img3.jpg);}
+
+/* main03 */
+#main03 {padding: 0 4%;}
+#main03 .contWrap {
+    height: calc(100vh - 100px);
+    padding: 100px 0;
+    background: url(../img/main3-bg.jpg) no-repeat center top;
+}

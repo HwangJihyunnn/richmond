@@ -1,0 +1,328 @@
+@charset "utf-8";
+@import url('fonts.css');
+@import url('all.min.css');
+
+html {font-size: 16px;}
+body {font: 400 16px "Noto Sans KR", sans-serif; color: #555;}
+
+/* 공통 */
+section + section, footer {padding: 0 4%;}
+section .contWrap {
+    position: relative; 
+    overflow: hidden;
+    height: calc(100vh - 100px); 
+    padding: 100px 0 50px;
+    background-color: #fff;
+}
+
+
+/* header */
+header {
+    position: fixed; 
+    left: 0; right: 0; top: 0; 
+    background: #fff;
+    height: 100px;
+    border-bottom: 1px solid #f4f4f4;
+    box-sizing: border-box;
+    z-index: 50;
+}
+header .logo {
+    position: absolute;
+    top: 50%; left: 4%;
+    width: 180px; height: 50px;
+    /* transform: translateY(-50%); */
+    margin-top: -25px;
+}
+header .logo > a {
+    display: block;
+    width: 100%; height: 100%; 
+    background: url(../img/logo.png) no-repeat center/contain;
+}
+header .gnb {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    text-align: center;
+    font-size: 0;
+}
+header .gnb > ul > li {
+    position: relative;
+    float: left;    
+}
+header .gnb > ul > li > a {
+    display: block;
+    position: relative;
+    padding: 0 35px;
+    font-size: 1.125rem;
+    line-height: 100px;
+    color: #000
+}
+/* depth2 _sub */
+header .gnb > ul ul {
+    position: absolute; 
+    top: 100px;
+    width: 100%; 
+    padding: 10px;
+    box-sizing: border-box;
+    display: none;
+}
+header .gnb > ul ul a {
+    display: block;
+    font-size: 0.938rem; /* html에 선언된 16px을 기준으로 15px로 나눈 값 */
+    line-height: 2.4em; /* 현재 요소의 폰트 크기 15픽셀을 기준으로 36픽셀 
+    적용한 값 */
+}
+header .gnb > ul ul a:hover,
+header .gnb > ul ul a:focus {
+    color: #8d7249;
+    text-decoration: underline;
+}
+
+/* util */
+header .util {
+    position: absolute;
+    top: 50%; right: 4%;
+    transform: translateY(-50%);
+}
+header .util .tel_mobile {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+header .util .tel_mobile:before {
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    width: 12px; height: 12px;
+    background: url(../img/tel-bl.png) no-repeat;
+}
+header .util .ico_insta {
+    display: inline-block;
+    width: 35px; height: 35px;
+    background: #000 url(../img/insta-wh.png) no-repeat center;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+.bgGnb {
+    position: fixed; 
+    left: 0; right: 0; top: 100px;
+    min-height: 170px;
+    background: #ffffff;
+    display: none;
+    z-index: 5;
+}
+
+/* mainMov */
+#mainMov {padding: 0 4%; box-sizing: border-box;}
+#mainMov .contWrap {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+#mainMov .contWrap video {
+    /* position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%); */
+    min-width: 100%;
+    min-height: 100%;    
+}
+/* main1 */
+#main01 {
+    position: relative;
+    padding: 0 4%;
+    box-sizing: border-box;
+}
+#main01 .contWrap {
+    height: 90vh;
+    background: url(../img/main1-bg.jpg) no-repeat fixed center/cover;
+}
+#main01 .mainCont {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    padding-top: 140px;
+    height: 40vh;
+    background: #fff;
+    text-align: center;
+    z-index: 10;
+}
+#main01 .mainCont .midText {
+    font-size: 1.5rem;
+    color: rgba(0,0,0,0.7);
+    margin-bottom: 10px;
+}
+#main01 .mainCont .bigText {
+    font-size: 2.5rem;
+    color: #000;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 50px;
+}
+#main01 .mainCont .smallText {
+    margin-top: 25px;
+    color: rgba(0,0,0,0.7);
+    font-size: 1.125rem;
+}
+
+/* main02 */
+#main02 {padding: 0 4%;}
+#main02 .contWrap {
+    padding: 250px 0 200px;
+}
+#main02 .contLeft {float: left; width: 40%;}
+#main02 .contLeft .bigText {
+    margin-bottom: 50px;
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #111;
+}
+#main02 .contLeft .midText {
+    font-size: 1.5rem;
+    color: rgba(0,0,0,0.7);
+    margin-bottom: 35px;
+}
+#main02 .contLeft span {display: block;}
+#main02 .contLeft .midText span:last-child {
+    font-weight: 500; 
+    color: rgba(0,0,0,0.85);
+}
+#main02 .contLeft .smallText {font-size: 1.063rem; color: rgba(0,0,0,0.6);}
+#main02 .contLeft .smallText span:first-child {margin-bottom: 20px;}
+#main02 .contRright {float: right; width: 60%; margin-left: -40px;}
+#main02 .contRright .richBg {
+    float: left;
+    width: calc(100%/3 - 40px); 
+    height: 730px;
+    margin-left: 40px;
+    background: no-repat center top/cover;   
+}
+#main02 .contRright .richBg.bg1 {background-image: url(../img/main2-img1.jpg);}
+#main02 .contRright .richBg.bg2 {margin-top: -100px; background-image: url(../img/main2-img2.jpg);}
+#main02 .contRright .richBg.bg3 {margin-top: 150px; background-image: url(../img/main2-img3.jpg);}
+
+/* main03 */
+#main03 {padding: 0 4%;}
+#main03 .contWrap {
+    /* padding: 100px 0 60px;  */
+    background: url(../img/main3-bg.jpg) no-repeat center top;
+}
+#main03 .titleArea {
+    color: #fff;
+    text-align: center;
+}
+#main03 .titleArea .secTitle {
+    font: 600 1.75rem 'Jost', sans-serif;
+    margin-bottom: 10px;
+}
+#main03 .titleArea .smallText span {display: block; margin-bottom: 5px; font-size: 1.125rem;}
+#main03 .spaceArea {
+    /* overflow: hidden; */
+    max-width: 1200px;
+    margin: 80px auto 0;
+}
+#main03 .spaceArea > .space {
+    position: relative;
+    float: left;
+    width: 373px;
+    height: 482px;
+    margin-right: 40px;
+    transition: all 0.3s;
+}
+#main03 .spaceArea > .space:hover {box-shadow: 12px 12px 0 rgba(0,0,0,0.2);}
+#main03 .spaceArea > .space:last-child {margin-right: 0;} 
+#main03 .spaceArea > .space img {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    display: block;
+}
+#main03 .spaceArea > .space img:last-child {opacity: 0; transition: all 0.5s;}
+#main03 .spaceArea > .space:hover img:last-child {opacity: 1;}
+
+/* main04 */
+#main04 {padding: 0 4%;}
+#main04 .contWrap {
+     background: url(../img/main4-bg.jpg) no-repeat center/cover;
+     box-sizing: border-box;
+}
+#main04 .contWrap .titleArea {text-align: center;}
+#main04 .contWrap .titleArea .ssText {
+    margin-bottom: 10px;
+    font: 700 1.5rem 'Jost', sans-serif;
+    color: #8d7249
+}
+#main04 .contWrap .titleArea .midText {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+#main04 .contWrap .titleArea .bigText {
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 50px;
+}
+#main04 .modelList {max-width: 1200px; margin: 80px auto 0;}
+#main04 .modelList li {
+    float: left; 
+    width: 285px;
+    height: 320px;
+    margin-right: 20px;
+    padding: 30px 25px;
+    border: 1px solid rgba(255,255,255,0.6);
+    color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+}
+#main04 .modelList li:last-child {margin-right: 0;}
+#main04 .modelList .modelText > span {display: block; font-family: "Jost", sans-serif;}
+#main04 .modelList .modelText > span:first-child {
+    font-size: 3.125rem;
+    font-weight: 600;
+}
+#main04 .modelList .modelText > span > span {font-size: 1.75rem; font-weight: 500;} 
+#main04 .modelList .modelText > span:last-child {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.6)
+}
+#main04 .modelList .infoArea {margin-top: 20px;}
+#main04 .modelList .infoArea .areaPic {
+    display: block;
+    height: 125px;
+    background: #8d7249 url(../img/floorplan-icon.png) no-repeat center 34%;
+    border-top: 1px solid transparent;
+    transition: all 0.2s;
+}
+#main04 .modelList .infoArea .areaPic > span {
+    display: block;
+    margin-top: 70px;
+}
+#main04 .modelList .infoArea .areaPic:hover {
+    background-color: #fff;
+    background-image: url(../img/floorplan-icon-on.png);
+}
+#main04 .modelList .infoArea:hover .areaPic > span {color: rgba(0,0,0,0.85)}
+#main04 .modelList .infoArea.vr > a {float: left; width: 50%;}
+#main04 .modelList .infoArea.vr .vrPic {
+    background-color: #59483f; 
+    background-image: url(../img/vr-icon.png);
+}
+#main04 .modelList .infoArea.vr .vrPic:hover {
+    background-color: #fff;
+    background-image: url(../img/vr-icon-on.png);
+}
+
+/* footer */
+footer .contWrap {background: rgba(0,0,0,0.8); padding: 60px 0; text-align: center; color: rgba(255,255,255,0.4)}
+footer .footText {margin-top: 20px; font-size: 0.938rem;}
+footer .footText > p {font-size: 0.875rem; color: rgba(255,255,255,0.25)}
+footer .f_address {margin-top: 20px;}
+footer .const_list {margin-top: 30px;}
+footer .const_list > p {display: inline-block; margin: 0 20px; font-size: 1.5rem; font-weight: 500;}
+footer .const_list > p > span {font-size: 0.875rem;}
