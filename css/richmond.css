@@ -79,6 +79,12 @@ header .gnb > ul ul a:focus {
     text-decoration: underline;
 }
 
+/* 모바일 메뉴 */
+.mobile-btn {border: none; background: none; position: absolute; top: 25px; left: 20px; display: none;}
+.mobile-btn img {width: 30px;}
+.mobile-ins {display: none;}
+.mobile-gnb {display: none;}
+.gnb-close {display: none; border: none; background: none; }
 /* util */
 header .util {
     position: absolute;

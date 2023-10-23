@@ -1,0 +1,55 @@
+@charset "utf-8";
+@import url('fonts.css');
+@import url('all.min.css');
+
+header nav {display: none;}
+header .logo {left: 43%;}
+header .util {display: flex;}
+header .util .call {display: none;}
+header .util .tel_mobile:before {width: 20px; height: 20px;}
+header .util .tel_mobile {padding-top: 3px;}
+header .util .ico_insta {display: none;}
+
+/* 모바일 */
+.mobile-ins {display: block;}
+.mobile-btn {display: block; cursor: pointer;}
+.mobile-gnb {width: 250px; height: 100vh; background: #fff; display: block; position: relative;}
+.mobile-gnb h2 {text-align: center; padding: 70px 0; border-bottom: 1px solid #ccc}
+.mobile-gnb h2 img{width: 150px; }
+.mobile-gnb ul li {border-bottom: 1px solid #ccc;}
+.mobile-gnb ul li a{display: block; padding-left: 20px; font-size: 18px; line-height: 3; color: rgba(0, 0, 0, 0.8); font-weight: 500;}
+.mobile-bg {width: 100%; height: 100vh; background: rgba(0,0,0,0.6); display: none;}
+.gnb-close{position: absolute; top: 20px; left: 250px; z-index: 999; display: block;}
+.gnb-close img{width: 30px; filter: invert(100%);}
+
+
+
+#mainMov {display: flex; justify-content: center; align-items: center;}
+#mainMov .contWrap {width: 500px; height: 350px; padding: 0;}
+#main01 .mainCont .midText, #main02 .contLeft .midText,#main04 .contWrap .titleArea .midText {font-size: 18px;}
+#main01 .mainCont .bigText,#main02 .contLeft .bigText, #main04 .contWrap .titleArea .bigText {font-size: 24px;margin-bottom: 10px}
+#main01 .mainCont .smallText,#main02 .contLeft .smallText {margin-top: 10px; font-size: 14px;}
+#main01 .contWrap {height: 40vh;}
+section .contWrap {height: 100%;}
+
+#main02 .contLeft {width: 100%; display: block; padding: 50px 0;}
+#main02 .contRright {display: flex; width: 100%;}
+#main02 .contRright .richBg {height: 500px; width: 100%; background: no-repeat; margin-left:0}
+#main02 .contRright .richBg.bg2 {margin-top: 0;}
+#main02 .contRright .richBg.bg3 {margin-top: 0;}
+.spaceArea {display: flex; flex-direction: column; justify-content: center; align-items: center;}
+
+#main04 .modelList {display: flex; flex-direction: column; height: 100vh;}
+#main04 .modelList li {width: 100%; height: 100px; margin-bottom: 200px; border: none;}
+#main03 .spaceArea > .space {margin-right: 0;}
+
+#main04 .modelList .modelText > span:first-child {font-size: 30px;}
+#main04 .modelList .infoArea .areaPic{font-size: 14px;}
+
+footer .contWrap img{width: 130px;}
+.footText .desc, .f_address {font-size: 12px;}
+footer .const_list > p {font-size: 14px;}
+
+#main02 .contWrap {padding: 50px 0;}
+#main01 .mainCont {padding: 50px 0; height: 20vh;}
+#main03 .spaceArea > .space:hover {box-shadow: none;}
